@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2eb5c0c0-a746-408b-a17f-3075cfff973b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media/vectors/innovation.ai" afterPath="$PROJECT_DIR$/media/vectors/innovation.ai" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="jekyllvsdita.iws" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4698795">
-              <caret line="928" column="200" selection-start-line="928" selection-start-column="200" selection-end-line="928" selection-end-column="200" />
+            <state vertical-scroll-proportion="0.8072289">
+              <caret line="908" column="19" selection-start-line="908" selection-start-column="19" selection-end-line="908" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -385,12 +384,12 @@
       <updated>1431263496820</updated>
       <workItem from="1431263498462" duration="895000" />
       <workItem from="1431373290366" duration="2018000" />
-      <workItem from="1431396437612" duration="6112000" />
+      <workItem from="1431396437612" duration="6232000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9025000" />
+    <option name="totallyTimeSpent" value="9145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1242" height="722" extended-state="0" />
@@ -480,8 +479,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4698795">
-          <caret line="928" column="200" selection-start-line="928" selection-start-column="200" selection-end-line="928" selection-end-column="200" />
+        <state vertical-scroll-proportion="0.8072289">
+          <caret line="908" column="19" selection-start-line="908" selection-start-column="19" selection-end-line="908" selection-end-column="19" />
           <folding />
         </state>
       </provider>

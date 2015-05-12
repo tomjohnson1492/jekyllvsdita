@@ -712,7 +712,7 @@
             <section>
                <h2>Comparing Jekyll with DITA</h2>
                <section data-background="media/vectors/innovation_code.svg">
-                  <h3>Authoring content in DITA</h3>
+                  <h3>1a. Authoring content in DITA</h3>
 <pre><code>&lt;task id="task_mhs_zjk_pp"&gt;
 &lt;title&gt;Printing a page&lt;/title&gt;
   &lt;taskbody&gt;
@@ -732,7 +732,7 @@
 </pre>
                </section>
                <section data-background="media/vectors/innovation_code.svg">
-                  <h3>Authoring content in Markdown</h3>
+                  <h3>1b. Authoring content in Markdown</h3>
 <pre><code>## Print a page
 1. Go to **File > Print**.
 2. Click the **Print** button.
@@ -740,7 +740,7 @@
             </section>
 
                <section data-background="media/vectors/innovation_code.svg">
-               <h3>Conditional processing in DITA</h3>
+               <h3>2a. Conditional processing in DITA</h3>
                <pre><code>&lt;p audience="mac"&gt;Your MacBook Pro is going to make you so happy!&lt;/p&gt;
 &lt;p audience="pc"&gt;Thanks for supporting the dying PC industry.&lt;/p&gt;
 &lt;p&gt;Congratulations on the purchase of your new computer.&lt;/p&gt;
@@ -748,7 +748,7 @@
 
             </section>
                <section data-background="media/vectors/innovation_code.svg">
-               <h3>Conditional processing in Jekyll</h3>
+               <h3>2b. Conditional processing in Jekyll</h3>
                <pre><code>{% if site.audience == "mac" %}
 Your MacBook Pro is going to make you so happy!
 {% elsif site.audience == "pc" %}
@@ -759,7 +759,7 @@ Congratulations on the purchase of your new computer.
                </code></pre>
             </section>
                <section data-background="media/vectors/innovation_code.svg">
-                  <h3>Content Re-use in DITA</h3>
+                  <h3>3a. Content Re-use in DITA</h3>
 <pre><code>&lt;topic id="topic_123"&gt;
 &lt;note type="warning" id="bolt_warning">Don't overtighten the bolts,
    as it may cause stripping.&lt;/note&gt;
@@ -768,7 +768,7 @@ Congratulations on the purchase of your new computer.
 </code></pre>
                </section>
                <section data-background="media/vectors/innovation_code.svg">
-                  <h3>Content Re-use in Jekyll</h3>
+                  <h3>3b. Content Re-use in Jekyll</h3>
 <pre><code>//Include file named bolt_note.md
 &lt;b&gt;Warning:&lt;/b&gt; Don't overtighten the bolts, as it may cause stripping.
 ...
@@ -776,7 +776,7 @@ Congratulations on the purchase of your new computer.
 </code></pre>
                </section>
                <section data-background="media/vectors/innovation_code.svg">
-                  <h3>Building a TOC in DITA</h3>
+                  <h3>4a. Building a TOC in DITA</h3>
                   <pre><code>&lt;topichead navtitle="Links"&gt;
    &lt;topicref href="keyref_links.dita"&gt;
       &lt;topicref href="inline_links.dita" audience="field_engineers"/&gt;
@@ -788,7 +788,7 @@ Congratulations on the purchase of your new computer.
                   </code></pre>
                </section>
                <section data-background="media/vectors/innovation_code.svg">
-                  <h3>Building a TOC in Jekyll</h3>
+                  <h3>4b. Building a TOC in Jekyll</h3>
                   <pre><code>// data file contents:
         entries:
          - title: Sidebar
@@ -813,7 +813,7 @@ Congratulations on the purchase of your new computer.
 
 
                <section data-background="media/vectors/innovation_code.svg">
-                  <h3>Creating Information Patterns in DITA</h3>
+                  <h3>5a. Creating Information Patterns in DITA</h3>
 <pre><code>&lt;task id="task_123"&gt;
    &lt;title&gt;How to wash dishes&lt;/title&gt;
    &lt;shortdesc&gt;My short description ...&lt;/shortdesc&gt;
@@ -836,7 +836,7 @@ Congratulations on the purchase of your new computer.
 
                </section>
                <section data-background="media/vectors/innovation_code.svg">
-                  <h3>Creating Information Patterns in Jekyll</h3>
+                  <h3>5b. Creating Information Patterns in Jekyll</h3>
                   <p>YML (in data files or frontmatter) and for loops</p>
                   <pre><code>---
 title: My Doc Collection
@@ -857,15 +857,15 @@ parameters:
                      </code></pre>
                </section>
                <section data-background="media/vectors/innovation_code.svg">
-                  <h3>PDF creation in DITA</h3>
+                  <h3>6a. PDF creation in DITA</h3>
                   <p>Set up XSL-FO transform</p>
                </section>
                <section data-background="media/vectors/innovation_code.svg">
-                  <h3>PDF creation with Jekyll</h3>
+                  <h3>6b. PDF creation with Jekyll</h3>
                   <p>No easy workflow, but possible via PrinceXML</p>
                </section>
                <section data-background="media/vectors/innovation_code.svg">
-                  <h3>Reviewing Content in DITA</h3>
+                  <h3>7a. Reviewing Content in DITA</h3>
                   <ul>
                      <li>OxygenXML webhelp with feedback</li>
                      <li>PDF for annotation</li>
@@ -873,7 +873,7 @@ parameters:
                   </ul>
                </section>
                <section data-background="media/vectors/innovation_code.svg">
-                  <h3>Reviewing Content in Jekyll</h3>
+                  <h3>7b. Reviewing Content in Jekyll</h3>
                   <ul>
                      <li>Github workflow</li>
                      <li>Online platforms: Poetica, Beegit, CloudCannon</li>
@@ -881,7 +881,7 @@ parameters:
                   </ul>
                </section>
                <section data-background="media/vectors/innovation_code.svg">
-                  <h3>Features DITA has that Jekyll lacks</h3>
+                  <h3>8a. Features DITA has that Jekyll lacks</h3>
                   <ul>
                      <li>Enforced information types</li>
                      <li>Out-of-the-box transforms</li>
@@ -893,7 +893,7 @@ parameters:
                   </ul>
                </section>
                <section data-background="media/vectors/innovation_code.svg">
-                  <h3>Features Jekyll has that DITA lacks</h3>
+                  <h3>8b. Features Jekyll has that DITA lacks</h3>
                   <ul>
                   <li>Tags</li>
                   <li>Liquid templating language</li>
