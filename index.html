@@ -720,16 +720,15 @@
        &lt;stepsection&gt;To print a page:&lt;/stepsection&gt;
           &lt;step&gt;
                &lt;cmd&gt;Go to &lt;menucascade&gt;&lt;uicontrol&gt;File&lt;/uicontrol&gt;
-   &lt;uicontrol&gt;Print&lt;/uicontrol&gt;&lt;/menucascade&gt;&lt;/cmd&gt;
+                &lt;uicontrol&gt;Print&lt;/uicontrol&gt;&lt;/menucascade&gt;&lt;/cmd&gt;
            &lt;/step&gt;
          &lt;step&gt;
-               &lt;cmd&gt;Click the &lt;uicontrol&gt;Print&lt;/uicontrol&gt; button.&lt;/cmd&gt;
+               &lt;cmd&gt;Click the &lt;uicontrol&gt;Print&lt;/uicontrol&gt;
+                button.&lt;/cmd&gt;
          &lt;/step&gt;
     &lt;/steps&gt;
  &lt;/taskbody&gt;
-&lt;/task&gt;
-</code>
-</pre>
+&lt;/task&gt;</code></pre>
                </section>
                <section data-background="media/vectors/innovation_code.svg">
                   <h3>1b. Authoring content in Markdown</h3>
@@ -769,7 +768,7 @@ Congratulations on the purchase of your new computer.
                </section>
                <section data-background="media/vectors/innovation_code.svg">
                   <h3>3b. Content Re-use in Jekyll</h3>
-<pre><code>//Include file named bolt_note.md
+<pre class="html"><code>_includes/bolt_note.md
 &lt;b&gt;Warning:&lt;/b&gt; Don't overtighten the bolts, as it may cause stripping.
 ...
 {% include bolt_note.md %}
@@ -803,11 +802,20 @@ Congratulations on the purchase of your new computer.
            url: /release_notes/
            audience: customer, fe
 ...
-&lt;ul id="mysidebar" class="nav"&gt;
- {% for entry in sidebar %}
-   {% for subcategory in entry.subcategories %}
-    {% if subcategory.audience contains buildAudience %}
-      &lt;li&gt;&lt;a href="#"&gt;{{ subcategory.title }}&lt;/a&gt;
+&lt;ul id=&quot;mysidebar&quot; class=&quot;nav&quot;&gt;
+    {% for entry in data.sidebar.entries. %}
+       {% for subcategory in entry.subcategories %}
+         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;{{ subcategory.title }}&lt;/a&gt;
+           &lt;ul&gt;
+             {% for item in subcategory.items %}
+                &lt;li&gt;&lt;a href=&quot;{{item.url | prepend: site.baseurl}}&quot;&gt;
+                {{item.title}}&lt;/a&gt;&lt;/li&gt;
+             {% endfor %}
+           &lt;/ul&gt;
+         &lt;/li&gt;
+       {% endfor %}
+    {% endfor %}
+&lt;/ul&gt;
                   </code></pre>
                </section>
 
@@ -817,7 +825,8 @@ Congratulations on the purchase of your new computer.
 <pre><code>&lt;task id="task_123"&gt;
    &lt;title&gt;How to wash dishes&lt;/title&gt;
    &lt;shortdesc&gt;My short description ...&lt;/shortdesc&gt;
-   &lt;prereq&gt;Before doing the dishes, you will need soap and gloves.&lt;/prereq&gt;
+   &lt;prereq&gt;Before doing the dishes, you will need soap and
+     gloves.&lt;/prereq&gt;
    &lt;taskbody&gt;
    &lt;context&gt;
    &lt;p&gt;This is my context...&lt;/p&gt;
@@ -851,9 +860,10 @@ parameters:
     data_type: "boolean"
     description: "my param description"
 ...
-{% for parameter in doc.parameters %}
+{% for parameter in site.doc.parameters %}
     {{parameter.title}}
     {{parameter.data_type}}
+    {{parameter.description}}
                      </code></pre>
                </section>
                <section data-background="media/vectors/innovation_code.svg">
@@ -884,8 +894,8 @@ parameters:
                   <h3>8a. Features DITA has that Jekyll lacks</h3>
                   <ul>
                      <li>Enforced information types</li>
-                     <li>Out-of-the-box transforms</li>
-                     <li>Universal, interchangeable format</li>
+                     <li>Out-of-the-box transforms beyond HTML</li>
+                     <li>Univeral, interchangeable format</li>
                      <li>Relationship tables</li>
                      <li>Chunk attribute with TOC</li>
                      <li>Conref range</li>
@@ -901,10 +911,10 @@ parameters:
                   <li>Different layouts/sidebars per page</li>
                   <li>Auto-preview server</li>
                   <li>Subheadings, topics with multiple tasks</li>
-                  <li>Navtabs within content</li>
+                  <li>Custom JS on pages</li>
                   </ul>
                   </section>
-               </section>
+
             <section data-background="media/vectors/innovation_code.svg">
                <h3>Broad comparisons</h3>
                <table>
@@ -918,6 +928,19 @@ parameters:
                   <tr><td>text-file format</td><td>text-file format</td></tr></tr>
                </table>
                </section>
+               <section data-background="media/vectors/innovation_code.svg">
+<h3>Which to use?</h3>
+                  <table>
+                     <tr><th>DITA</th><th>Jekyll</th></tr>
+                     <tr><td>Large team?</td><td>Small team?</td></tr>
+                     <tr><td>Lots of PDFs?</td><td>Web deliverable?</td></tr>
+                     <tr><td>GUI documentation?</td><td>Developer documentation?</td></tr>
+                     <tr><td>Enforce consistency?</td><td>Flexiblity in design?</td></tr>
+                     <tr><td>$$$$?</td><td>$?</td></tr>
+                     <tr><td>Love XML?</td><td>Love HTML, CSS, JS?</td></tr>
+                     <tr><td>Prefer CMS?</td><td>Prefer revision control?</td></tr>
+                  </table>
+               </section>
             <section>
                <h1>Thanks!</h1>
                <section>
@@ -925,8 +948,8 @@ parameters:
                   <ul>
                      <li>Blog: <a class="orange" href="http://idratherbewriting.com">idratherbewriting.com</a></li>
                      <li>Twitter: <a class="orange" href="http://twitter.com/tomjohnson">@tomjohnson</a></li>
-                     <li>GitHub for slides: <a class="orange" href="https://github.com/tomjohnson1492/jekyllversusdita">github.com/tomjohnson1492/innovation</a></li>
-                     <li> Github for Jekyll documentation theme: <a class="orange" href="http://tomjohnson1492.github.io/documentation-theme-jekyll/">http://tomjohnson1492.github.io/documentation-theme-jekyll/</a>
+                     <li>GitHub for slides: <a class="orange" href="https://github.com/tomjohnson1492/jekyllvsdita">github.com/tomjohnson1492/jekyllvsdita</a></li>
+                     <li> Github for Jekyll documentation theme: <a class="orange" href="http://tomjohnson1492.github.io/jekyllvsdita/">http://tomjohnson1492.github.io/documentation-theme-jekyll/</a>
                      <li> Email: <a class="orange" href="mailto:tomjohnson1492@gmail.com">tomjohnson1492@gmail.com</a></li>
                   </ul>
                </section>
