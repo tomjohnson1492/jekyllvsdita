@@ -128,7 +128,7 @@
                </section> -->
              
             <section>
-               <h2>How I ended up with this dilemma</h2>
+               <h2>How I ended up in this dilemma</h2>
                <img src="media/vectors/innovation_milkyway.svg" />
                <aside class="notes">
                   <p>- In SV, every company a startup.</p>
@@ -258,7 +258,7 @@
             <section>
                <h2>Dilemmas with innovation</h2>
                <section>
-                  <h4><span class="orange">How long can you operate at a sub-performing level while you do research and development?</span></h4>
+                  <h4><span class="orange">How long can you operate at a high-performing level while you do research and development?</span></h4>
                   <image src="media/vectors/innovation_performance.svg"/>
                   <aside class="notes">
                      <p>- Think Big Thursdays somewhat of an illusion.</p>
@@ -788,34 +788,27 @@ Congratulations on the purchase of your new computer.
                </section>
                <section data-background="media/vectors/innovation_code.svg">
                   <h3>4b. Building a TOC in Jekyll</h3>
-                  <pre><code>// data file contents:
+                  <pre><code>
         entries:
          - title: Sidebar
            subcategories:
          - title: Overview
            items:
+
          - title: Introduction
            url: /introduction/
            audience: customer
+           print: true
 
          - title: Release Notes
            url: /release_notes/
            audience: customer, fe
-...
-&lt;ul id=&quot;mysidebar&quot; class=&quot;nav&quot;&gt;
-    {% for entry in data.sidebar.entries. %}
-       {% for subcategory in entry.subcategories %}
-         &lt;li&gt;&lt;a href=&quot;#&quot;&gt;{{ subcategory.title }}&lt;/a&gt;
-           &lt;ul&gt;
-             {% for item in subcategory.items %}
-                &lt;li&gt;&lt;a href=&quot;{{item.url | prepend: site.baseurl}}&quot;&gt;
-                {{item.title}}&lt;/a&gt;&lt;/li&gt;
-             {% endfor %}
-           &lt;/ul&gt;
-         &lt;/li&gt;
-       {% endfor %}
-    {% endfor %}
-&lt;/ul&gt;
+           print: false
+
+         - title: Getting Started
+           url: /getting_started/
+           audience: customer, fe
+           print: true
                   </code></pre>
                </section>
 
@@ -873,6 +866,7 @@ parameters:
                <section data-background="media/vectors/innovation_code.svg">
                   <h3>6b. PDF creation with Jekyll</h3>
                   <p>No easy workflow, but possible via PrinceXML</p>
+                  <a href="http://www.princexml.com/"><img src="media/rasters/princexml.png"/></a>
                </section>
                <section data-background="media/vectors/innovation_code.svg">
                   <h3>7a. Reviewing Content in DITA</h3>
@@ -895,7 +889,7 @@ parameters:
                   <ul>
                      <li>Enforced information types</li>
                      <li>Out-of-the-box transforms beyond HTML</li>
-                     <li>Univeral, interchangeable format</li>
+                     <li>Universal, interchangeable format</li>
                      <li>Relationship tables</li>
                      <li>Chunk attribute with TOC</li>
                      <li>Conref range</li>
@@ -910,8 +904,8 @@ parameters:
                   <li>Variables</li>
                   <li>Different layouts/sidebars per page</li>
                   <li>Auto-preview server</li>
-                  <li>Subheadings, topics with multiple tasks</li>
-                  <li>Custom JS on pages</li>
+                  <li>Subheadings; topics with multiple tasks</li>
+                  <li>Custom JavaScript directly on pages</li>
                   </ul>
                   </section>
 
@@ -919,37 +913,40 @@ parameters:
                <h3>Broad comparisons</h3>
                <table>
                   <tr><th>DITA</th><th>Jekyll</th></tr>
+                  <tr><td><span class="orange">Open source</span></td><td><span class="orange">Open source</span></td></tr>
+                  <tr><td><span class="orange">Text-file format</span></td><td><span class="orange">Text-file format</span></td></tr>
                   <tr><td>Rigid</td><td>Flexible</td></tr>
                   <tr><td>Vendor heavy</td><td>Vendor light</td></tr>
                   <tr><td>CMS-oriented</td><td>Github-oriented</td></tr>
-                  <tr><td>XML architecture</td><td>web architecture</td></tr>
-                  <tr><td>committee driven</td><td>developer driven</td></tr>
-                  <tr><td>open source</td><td>open source</td></tr>
-                  <tr><td>text-file format</td><td>text-file format</td></tr></tr>
+                  <tr><td>XML architecture</td><td>Web architecture</td></tr>
+                  <tr><td>Committee driven</td><td>Developer driven</td></tr>
+                  <tr><td>XML editor</td><td>Text editor</td></tr></tr>
                </table>
                </section>
                <section data-background="media/vectors/innovation_code.svg">
 <h3>Which to use?</h3>
                   <table>
                      <tr><th>DITA</th><th>Jekyll</th></tr>
-                     <tr><td>Large team?</td><td>Small team?</td></tr>
-                     <tr><td>Lots of PDFs?</td><td>Web deliverable?</td></tr>
-                     <tr><td>GUI documentation?</td><td>Developer documentation?</td></tr>
-                     <tr><td>Enforce consistency?</td><td>Flexiblity in design?</td></tr>
-                     <tr><td>$$$$?</td><td>$?</td></tr>
-                     <tr><td>Love XML?</td><td>Love HTML, CSS, JS?</td></tr>
-                     <tr><td>Prefer CMS?</td><td>Prefer revision control?</td></tr>
+                     <tr><td>Large team</td><td>Small team</td></tr>
+                     <tr><td>Lots of PDFs</td><td>Web deliverable</td></tr>
+                     <tr><td>GUI documentation</td><td>Developer documentation</td></tr>
+                     <tr><td>Enforce consistency</td><td>Flexibility in design</td></tr>
+                     <tr><td>$$$$</td><td>$</td></tr>
+                     <tr><td>Love XML</td><td>Love HTML, CSS, JS</td></tr>
+                     <tr><td>Prefer CMS</td><td>Prefer revision control</td></tr>
                   </table>
                </section>
+            </section>
             <section>
                <h1>Thanks!</h1>
-               <section>
-                  <h3>Contact info</h3>
+   
+                 
                   <ul>
                      <li>Blog: <a class="orange" href="http://idratherbewriting.com">idratherbewriting.com</a></li>
                      <li>Twitter: <a class="orange" href="http://twitter.com/tomjohnson">@tomjohnson</a></li>
                      <li>GitHub for slides: <a class="orange" href="https://github.com/tomjohnson1492/jekyllvsdita">github.com/tomjohnson1492/jekyllvsdita</a></li>
                      <li> Email: <a class="orange" href="mailto:tomjohnson1492@gmail.com">tomjohnson1492@gmail.com</a></li>
+                     <li>Jekyll doc theme: <a class="orange" href="http://bitly.com/jdoctheme">bitly.com/jdoctheme</a></li>
                   </ul>
                </section>
                <section>
@@ -969,7 +966,7 @@ parameters:
                      <li>Microsoft is very interesting again -- very, by Jason Calicanus. <a href="https://www.linkedin.com/pulse/microsoft-interesting-again-very-jason-calacanis">Linkedin</a></li>
                   </ul>
                </section>
-            </section>
+
          </div>
       </div>
       <script src="lib/js/head.min.js"></script>
