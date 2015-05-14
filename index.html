@@ -148,7 +148,8 @@
             </section>
             <section>
                <h2>"Think Big Thursdays"</h2>
-               <img src="media/vectors/innovation_tbt.svg"/>
+               <img style="max-width:700px;" src="media/vectors/innovation_tbt.svg"/>
+               <p class="fragment">How would you design the perfect help system?</p>
                <aside class="notes">
                   <p>- Task: transition content online.</p>
                   <p>- Time to implement, experiment.</p>
@@ -428,15 +429,13 @@
                <section data-background="media/vectors/innovation_code.svg">
                   <h3>This slidedeck is just HTML5.</h3>
                   <p>Here's the code for this slide:</p>
-                  <pre><code>
-          &lt;section&gt;
-            &lt;h3&gt;This slidedeck is just HTML5.&lt;/h3&gt;
-            &lt;p>Here's the code for this slide:&lt;/p&gt;
-             &lt;p&gt;Github repo: &lt;a target="_blank" href="https://github.com/tomjohnson1492/innovation/"&gt;
-             https://github.com/tomjohnson1492/innovation/&lt;/a&gt;&lt;/p&gt;
-            &lt;p&gt;&lt;i&gt;So much more satisfying to work in text 
-            file formats.&lt;/i&gt;&lt;/p&gt;
-         &lt;/section&gt;
+                  <pre><code>&lt;section&gt;
+  &lt;h3&gt;This slidedeck is just HTML5.&lt;/h3&gt;
+     &lt;p>Here's the code for this slide:&lt;/p&gt;
+         &lt;p&gt;Github repo: &lt;a target="_blank"
+                     href="https://github.com/tomjohnson1492/innovation/"&gt;https://github.com/tomjohnson1492/innovation/&lt;/a&gt;&lt;/p&gt;
+         &lt;p&gt;&lt;i&gt;So much more satisfying to work in text file formats.&lt;/i&gt;&lt;/p&gt;
+ &lt;/section&gt;
             </code></pre>
                   <p>Github: <a target="_blank" href="https://github.com/tomjohnson1492/innovation/">https://github.com/tomjohnson1492/innovation/</a></p>
                   <p><i>So much more satisfying to work in text-file formats.</i></p>
@@ -580,9 +579,9 @@
                      <li>Handle any type of content.</li>
                   </ul>
                   <aside class="notes">
+                     <p>- Tell story of tour of Capgemini in India</p>
                      <p>- Main criticisms: Static site gens work only for small projects.</p>
                      <p>- Acknowledgment: Could be true. But consider scalability of Wikipedia.</p>
-                     <p>- No need to create fancy specializations for custom content types.</p>
                   </aside>
                </section>
                <section>
@@ -839,7 +838,7 @@ Congratulations on the purchase of your new computer.
                </section>
                <section data-background="media/vectors/innovation_code.svg">
                   <h3>5b. Creating Information Patterns in Jekyll</h3>
-                  <p>YML (in data files or frontmatter) and for loops</p>
+
                   <pre><code>---
 title: My Doc Collection
 summary: "My summary here..."
@@ -852,6 +851,7 @@ parameters:
     title: "my param title"
     data_type: "boolean"
     description: "my param description"
+---
 ...
 {% for parameter in site.doc.parameters %}
     {{parameter.title}}
@@ -891,21 +891,17 @@ parameters:
                      <li>Out-of-the-box transforms beyond HTML</li>
                      <li>Universal, interchangeable format</li>
                      <li>Relationship tables</li>
-                     <li>Chunk attribute with TOC</li>
-                     <li>Conref range</li>
                      <li>Indexing tools</li>
                   </ul>
                </section>
                <section data-background="media/vectors/innovation_code.svg">
                   <h3>8b. Features Jekyll has that DITA lacks</h3>
                   <ul>
-                  <li>Tags</li>
                   <li>Liquid templating language</li>
                   <li>Variables</li>
-                  <li>Different layouts/sidebars per page</li>
+                  <li>Tags</li>
                   <li>Auto-preview server</li>
-                  <li>Subheadings; topics with multiple tasks</li>
-                  <li>Custom JavaScript directly on pages</li>
+                  <li>Custom JS; info patterns on page</li>
                   </ul>
                   </section>
 
@@ -913,14 +909,14 @@ parameters:
                <h3>Broad comparisons</h3>
                <table>
                   <tr><th>DITA</th><th>Jekyll</th></tr>
-                  <tr><td><span class="orange">Open source</span></td><td><span class="orange">Open source</span></td></tr>
-                  <tr><td><span class="orange">Text-file format</span></td><td><span class="orange">Text-file format</span></td></tr>
-                  <tr><td>Rigid</td><td>Flexible</td></tr>
-                  <tr><td>Vendor heavy</td><td>Vendor light</td></tr>
-                  <tr><td>CMS-oriented</td><td>Github-oriented</td></tr>
-                  <tr><td>XML architecture</td><td>Web architecture</td></tr>
-                  <tr><td>Committee driven</td><td>Developer driven</td></tr>
-                  <tr><td>XML editor</td><td>Text editor</td></tr></tr>
+                  <tr class="fragment"><td><span class="orange">Open source</span></td><td><span class="orange">Open source</span></td></tr>
+                  <!-- <tr><td><span class="orange">Text-file format</span></td><td><span class="orange">Text-file format</span></td></tr>-->
+                  <tr class="fragment"><td>Rules-based</td><td>Flexible, free</td></tr>
+                  <tr class="fragment"><td>Vendor heavy</td><td>Vendor light</td></tr>
+                  <tr class="fragment"><td>CMS-oriented</td><td>Github-oriented</td></tr>
+                  <tr class="fragment"><td>XML architecture</td><td>Web architecture</td></tr>
+                  <tr class="fragment"><td>Committee driven</td><td>Developer driven</td></tr>
+                  <tr class="fragment"><td>XML editor</td><td>Text editor</td></tr></tr>
                </table>
                </section>
                <section data-background="media/vectors/innovation_code.svg">
